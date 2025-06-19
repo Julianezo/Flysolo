@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom'; // este sirve para poder redirig
 import Navbar from "./Componentes/Navbar";
 import Principal from './Componentes/Principal';
 import HistorialViaje from './Componentes/HistorialViaje';
+import Login from './Componentes/Login';
 import './App.css';
 function App() {
   return (
     <>
-      <Navbar />
-      <HistorialViaje />
+      <Login/>
     </>
   );
 }
