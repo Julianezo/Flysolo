@@ -1,0 +1,39 @@
+.form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.input-field {
+  padding: 16px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.submit-button {
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #f0f0f0;
+}

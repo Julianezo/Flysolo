@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between; /* separa el logo y el botón */
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-button {
+ width:200px;
+ /* Evita que se reduzcan demasiado */
+
+  padding: 10px 20px;
+  background-color: white;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007BFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  /* Otros estilos, por ejemplo: */
+  list-style: none;
+  padding: 1rem 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-end; 
+  list-style: none;
+
+  
+
+}
+
+.nav-menu.open {
+  transform: scaleY(1);
+  opacity: 1;
+}
