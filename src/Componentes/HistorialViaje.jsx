@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './HistorialViaje.css';
+import '../Componentescss/HistorialViaje.css';
 
 function HistorialViaje() {
   const [viajes, setViajes] = useState([]);

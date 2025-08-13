@@ -1,16 +1,26 @@
-import { Component, useState } from 'react'; //me trae el hook usefect, esto lo podemos usar para hacer mas dinamico las componentes, ya que podemos a empzar  ajuagar que siu apretas una cosa cambia el estado entonces react renderixa otra componente
-import { useLocation } from 'react-router-dom'; // este sirve para poder redirigir a difernetes partes de la pagana y cargar los componnetes que van a conformar esa parte de la pagina
+import { useState } from 'react';
 import Navbar from "./Componentes/Navbar";
 import Principal from './Componentes/Principal';
 import HistorialViaje from './Componentes/HistorialViaje';
 import Login from './Componentes/Login';
-import './App.css';
+import RutaPrivada from "./RutaPrivada";  
+import { Route, Routes, Navigate } from 'react-router-dom'; 
+import RegistroConductor from './Componentes/RegistroConductor';
+
 function App() {
+  const [logueado, setLogueado] = useState(false);
+
   return (
-    <>
-      <Login/>
-    </>
+    <Routes> 
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/RegistroConductor" element={<RegistroConductor/>} />
+      <Route path="/login" element={<Login setLogueado={setLogueado} />} /> 
+      <Route path="/Principal" element={<RutaPrivada logueado={logueado}><><Navbar /><Principal /></></RutaPrivada>} />
+      <Route path="/Historial" element={<RutaPrivada logueado={logueado}><><Navbar /><HistorialViaje /></></RutaPrivada>} />
+      <Route path="/Perfil" element={<RutaPrivada logueado={logueado}><><Navbar /><HistorialViaje /></></RutaPrivada>} />
+      <Route path="Conductor" element={<RutaPrivada logueado={logueado}><><Navbar /><HistorialViaje /></></RutaPrivada>} />
+    </Routes>
   );
 }
 
-export default App;;
+export default App;

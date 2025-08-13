@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Principal.css";
+import "../Componentescss/Principal.css";
+
 
 export default function TravelForm() {
   const [destination, setDestination] = useState("");
